@@ -44,7 +44,7 @@ rustc 1.38.0 (625451e37 2019-09-23)
 the `rustup` tool will be able to peform a bunch of tasks. Once of them is upgrading your current rust version:
 
 ```
-rustup upgrade
+rustup update
 ```
 
 ### hello world
