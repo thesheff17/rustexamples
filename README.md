@@ -16,7 +16,10 @@
 
 - [prerequisites](#prerequisites)
 - [upgrading rust](#upgrading-rust)
+- [cargo](#cargo)
 - [hello world](#hello-world)
+
+---
 
 ### prerequisites
 
@@ -39,6 +42,21 @@ output:
 rustc 1.38.0 (625451e37 2019-09-23)
 ```
 
+---
+
+### cargo
+cargo is the package manager that comes with rust.  You will want to make sure you also have this installed.  It comes with the default instllation method of rust but to check what version of cargo you have by running:
+```
+cargo -V
+```
+
+output:
+```
+cargo 1.38.0 (23ef9a4ef 2019-08-20)
+```
+
+---
+
 ### upgrading rust
 
 the `rustup` tool will be able to peform a bunch of tasks. Once of them is upgrading your current rust version:
@@ -47,10 +65,33 @@ the `rustup` tool will be able to peform a bunch of tasks. Once of them is upgra
 rustup update
 ```
 
+---
+
 ### hello world
+This will show you how to create your first program that says hello world.  First create a directory and create a file `main.rs`. Add the following text:
 
 ```
 fn main() {
     println!("Hello World!");
 }
 ```
+
+Now you want to compile your rust program:
+
+```
+rustc main.rs
+```
+
+if you see no output the compile was successful and you should now have a binary for your program called `main` or `main.exe` on windows.  You can now run your hello world program by doing:
+
+```
+./main
+```
+
+output:
+
+```
+hello world!
+```
+
+---
