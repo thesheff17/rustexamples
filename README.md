@@ -223,7 +223,7 @@ You can see the difference in peformance just with a hello world project.  As yo
 
 
 ### cargo build for release
-When you run `cargo build` you see that it says `unoptimized + debuginfo` This means its creating a binary that is not optimized for production and has debug symobols in it for debugging purposes.  Once you are ready for production you will want to pass `--release` to `cargo build`  This is another speed optimization as well.  It will take longer to compile but your rust program will run faster.  This will make a binary in directory `target/release/` vs `target/debug/`
+When you run `cargo build` you see that it says `unoptimized + debuginfo` This means its creating a binary that is not optimized for production and has debug symbols in it for debugging purposes.  Once you are ready for production you will want to pass `--release` to `cargo build`  This is another speed optimization as well.  It will take longer to compile but your rust program will run faster.  This will make a binary in directory `target/release/` vs `target/debug/`
 
 ```
 cargo build --release
