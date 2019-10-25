@@ -23,6 +23,7 @@
 - [cargo run](#cargo-run)
 - [cargo check](#cargo-check)
 - [cargo build for release](#cargo-build-for-release)
+- [variables and user input](#variables-and-user-input)
 
 ---
 
@@ -235,3 +236,52 @@ output:
 Compiling hello_world v0.1.0 (/Users/user/git/rustcode/hello_world)
     Finished release [optimized] target(s) in 0.21s
 ```
+
+---
+
+### variables and user input
+This will show you how to accept user input in a script.  There are a number of new concepts here.  By default rust variables are immutable which means you cannot change them.  In order to change variables you will use the keyword `mut`.  This also shows you how to remove the carriage return from a string:
+
+```
+use std::io;
+
+fn main() {
+
+	// by default variables in rust are immutable
+	let age = 20;
+
+	// lets declare two mutable variables 
+    let mut fname = String::new();
+    let mut lname = String::new();
+    
+    println!("Please enter your first name?");
+
+    io::stdin().read_line(&mut fname)
+    	.expect("Failed to read line");
+
+    println!("Please enter your last name?");
+
+    io::stdin().read_line(&mut lname)
+    	.expect("Failed to read line");
+
+    // lets carriage return at the end of these strings
+    fname = fname.replace("\n", "");
+    lname = lname.replace("\n", "");
+
+    println!("Welcome to rust {} {}.", fname, lname);
+    println!("Current age {}.", age);
+}
+```
+
+output:
+```
+Please enter your first name?
+Bob
+Please enter your last name?
+Jones
+Welcome to rust Bob Jones.
+Current age 20.
+```
+
+
+
