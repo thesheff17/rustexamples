@@ -247,22 +247,22 @@ use std::io;
 
 fn main() {
 
-	// by default variables in rust are immutable
-	let age = 20;
+    // by default variables in rust are immutable
+    let age = 37;
 
-	// lets declare two mutable variables 
+    // lets declare two mutable variables 
     let mut fname = String::new();
     let mut lname = String::new();
     
     println!("Please enter your first name?");
 
     io::stdin().read_line(&mut fname)
-    	.expect("Failed to read line");
+        .expect("Failed to read line");
 
     println!("Please enter your last name?");
 
     io::stdin().read_line(&mut lname)
-    	.expect("Failed to read line");
+        .expect("Failed to read line");
 
     // lets carriage return at the end of these strings
     fname = fname.replace("\n", "");
