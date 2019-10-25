@@ -248,7 +248,7 @@ use std::io;
 fn main() {
 
     // by default variables in rust are immutable
-    let age = 37;
+    let age = 20;
 
     // lets declare two mutable variables 
     let mut fname = String::new();
