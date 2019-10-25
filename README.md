@@ -264,7 +264,7 @@ fn main() {
     io::stdin().read_line(&mut lname)
         .expect("Failed to read line");
 
-    // lets carriage return at the end of these strings
+    // lets remove carriage returns at the end of these strings
     fname = fname.replace("\n", "");
     lname = lname.replace("\n", "");
 
